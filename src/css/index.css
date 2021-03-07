@@ -1,5 +1,12 @@
-body {
-  background-color: red;
+body .title-row .col h1 {
+  text-align: center;
+}
+body .main-content .submit-button-section {
+  display: flex;
+  justify-content: center;
+}
+body .main-content .submit-button-section button {
+  margin: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

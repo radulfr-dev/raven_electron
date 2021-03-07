@@ -2,17 +2,57 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="index.css">
+    <title>Raven</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
     <div class="fluid-container">
-      <div class="row">
+      <div class="row title-row">
         <div class="col">
           <h1>Raven</h1>
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row main-content">
+        <div class="col">
+          <form>
+            <div class="likes-section topup-section">
+              <label for="likes-input">Likes</label>
+              <input id="likes-input" class="form-control" value="0"></input>
+              <input type="hidden" value="likes">
+            </div>
+            <div class="views-section topup-section">
+              <label for="views-input">Views</label>
+              <input id="views-input" class="form-control" value="0"></input>
+              <input type="hidden" value="views">
+            </div>
+            <div class="saves-section topup-section">
+              <label for="saves-input">Saves</label>
+              <input id="saves-input" class="form-control" value="0"></input>
+              <input type="hidden" value="saves">
+            </div>
+            <div class="impressions-section topup-section">
+              <label for="impressions-input">Impressions</label>
+              <input id="impressions-input" class="form-control" value="0"></input>
+              <input type="hidden" value="impressions">
+            </div>
+            <div class="reels-section topup-section">
+              <label for="reels-input">Reels</label>
+              <input id="reels-input" class="form-control" value="0"></input>
+              <input type="hidden" value="reels">
+            </div>
+            <div class="submit-button-section">
+              <button id="send-button" class="btn btn-primary">Send</button>
+              <button id="clear-button" class="btn btn-secondary">Clear</button>
+            </div>
+          </form> 
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      require('./js/index.js');
+    </script>
   </body>
 </html>
