@@ -17,7 +17,5 @@ sendButton.addEventListener('click', (e) => {
         orderObject[thisService] = serviceAmount;
 
     }
-
-    console.log(orderObject);
-    ipcRenderer.send('hey', orderObject);
+    ipcRenderer.send('orderPlaced', orderObject);
 });

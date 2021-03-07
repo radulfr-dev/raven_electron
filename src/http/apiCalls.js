@@ -1,4 +1,5 @@
 const axios = require('axios');
+const supplierApis = require('./supplierApis.js');
 
 function apiCalls(){
     function fetchAsgardianActiveLikes(){
@@ -48,7 +49,22 @@ function apiCalls(){
                 });
         });
     }   
-    return { fetchAsgardianActiveLikes, fetchAsgardianActiveViews, fetchAsgardianActiveSaves, fetchAsgardianActiveImpressions };
+
+    function placeOrder(request){
+
+        const apiUrl = supplierApis[request.supplier];
+        const apiKey = "KEY_HERE";
+        const action = "add";
+        const serviceId = "SERVICE_ID_HERE";
+        const postUrl = "POST_URL_HERE";
+        const quantity = "QUANTITY_HERE";
+
+        axios.post(apiUrl, {
+            "key": 
+        })
+
+    }
+    return { fetchAsgardianActiveLikes, fetchAsgardianActiveViews, fetchAsgardianActiveSaves, fetchAsgardianActiveImpressions, placeOrder };
 }
 
 module.exports = apiCalls();
